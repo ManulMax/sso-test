@@ -1,0 +1,41 @@
+<h1 style="margin-top: 2rem;font-size: 1.8rem;color: #4c4e53;font-weight: bold;text-align: center;">SSO LOGIN</h1>
+<hr style="width: 80%;">
+<div class="container" style="display: flex;justify-content: center;">
+  <button type="button" style="background-color: blueviolet; color:aliceblue; padding: 0.5rem; border-radius: 0.5rem;  margin: 2.0rem; display: flex; justify-content: space-between;" 
+    (click)="signInWithGoogle()">
+    <img src="../../assets/google.png"
+      style="width: 2rem; height: 2rem;"
+      alt="">
+    <!-- Login With Google -->
+  </button>
+  <br />
+  <br />
+  <button type="button"  style="background-color: blueviolet; color:aliceblue; padding: 0.5rem; border-radius: 0.5rem;  margin: 2.0rem;"
+    (click)="signOut()">
+    Log Out
+  </button>
+  &nbsp;
+  <button type="button"  style="background-color: blueviolet; color:aliceblue; padding: 0.5rem; border-radius: 0.5rem;  margin: 2.0rem;"
+    (click)="signInWithFB()">
+    <img src="../../assets/fb.png"
+    style="width: 2rem; height: 2rem;"
+    alt="">
+    <!-- Login With Facebook -->
+  </button>
+  <button type="button"  style="background-color: blueviolet; color:aliceblue; padding: 0.5rem; border-radius: 0.5rem;  margin: 2.0rem;"
+    (click)="signInWithMicrosoft()">
+    <img src="../../assets/micro.png"
+    style="width: 2rem; height: 2rem;"
+    alt="">
+    <!-- Login With Facebook -->
+  </button>
+
+  <br />
+  <br />
+
+  <div *ngIf="user">
+    <!-- <img src="{{user.image}}" alt="" /> -->
+    <h4>{{user.name}}</h4>
+    <p>{{user.email}}</p>
+  </div>
+</div>
